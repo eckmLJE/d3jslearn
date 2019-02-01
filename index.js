@@ -1,12 +1,12 @@
 var venue = d3.select(".venue");
 
-var group = venue
+var groups = venue
   .selectAll("g")
   .data(venueBooths)
   .enter()
   .append("g");
 
-var booth = group
+var booths = groups
   .selectAll("rect")
   .data(venueBooths)
   .enter()
@@ -26,6 +26,10 @@ var booth = group
   .attr("fill", "none")
   .attr("stroke-width", "2px")
   .attr("stroke", "black");
+
+groups.append('text')
+  .attr('x', )
+
 
 // var width = 420,
 //   barHeight = 20;
