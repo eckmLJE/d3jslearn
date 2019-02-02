@@ -23,8 +23,6 @@ svg
   .attr("width", "100%")
   .attr("height", "100%")
   .style("fill", "none")
-  //   .style("stroke", "rgba(0,0,0,.125)")
-  //   .style("stroke-width", "1px")
   .style("pointer-events", "all")
   .call(
     d3
@@ -69,8 +67,18 @@ var tableRects = tables
 tables
   .append("text")
   .text(function(d) {
+    return "Booth " + d.id;
+  })
+  .attr("dx", 5)
+  .attr("dy", 60)
+  .attr("font-size", "8px");
+
+tables
+  .append("text")
+  .text(function(d) {
     return d.reservation.orgName ? d.reservation.orgName : "Available";
   })
   .attr("dy", 15)
   .attr("dx", 5)
-  .attr("font-size", "10px");
+  .attr("font-size", "9px")
+  .attr("font-weight", "bold");
