@@ -10,26 +10,13 @@ venueBooths.forEach(function(booth) {
   );
 });
 
-// d3 drawing
-
-var svg = d3.select("#venue-svg");
-
 // $("#set-groups-button").click(setGroups);
 // $("#add-tables-button").click(addTables);
 // $("#add-reservations-button").click(addReservations);
 
-svg
-  .append("rect")
-  .attr("width", "100%")
-  .attr("height", "100%")
-  .style("fill", "none")
-  .style("pointer-events", "all")
-  .call(
-    d3
-      .zoom()
-      .scaleExtent([1 / 2, 4])
-      .on("zoom", zoomed)
-  );
+// d3 drawing
+
+var svg = d3.select("#venue-svg");
 
 function zoomed() {
   g.attr("transform", d3.event.transform);
@@ -82,3 +69,16 @@ tables
   .attr("dx", 5)
   .attr("font-size", "9px")
   .attr("font-weight", "bold");
+
+svg
+  .append("rect")
+  .attr("width", "100%")
+  .attr("height", "100%")
+  .style("fill", "none")
+  .style("pointer-events", "all")
+  .call(
+    d3
+      .zoom()
+      .scaleExtent([1 / 2, 4])
+      .on("zoom", zoomed)
+  );

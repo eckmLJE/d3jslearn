@@ -1,4 +1,4 @@
-venueBooths = [
+var venueBooths = [
   {
     id: 1,
     x: 50,
