@@ -1,18 +1,3 @@
-boothReservations = [
-  {
-    orgName: "IOU",
-    boothId: 1
-  },
-  {
-    orgName: "PSA",
-    boothId: 2
-  },
-  {
-    orgName: "BTW",
-    boothId: 5
-  }
-];
-
 venueBooths = [
   {
     id: 1,
@@ -41,14 +26,16 @@ venueBooths = [
     x: 250,
     y: 50,
     w: 50,
-    h: 65
+    h: 65,
+    reservation: {}
   },
   {
     id: 4,
     x: 350,
     y: 50,
     w: 50,
-    h: 65
+    h: 65,
+    reservation: {}
   },
   {
     id: 5,
@@ -60,5 +47,51 @@ venueBooths = [
       orgName: "IMHO",
       orgId: 25
     }
+  },
+  {
+    id: 6,
+    x: 50,
+    y: 165,
+    w: 50,
+    h: 65,
+    reservation: {}
+  },
+  {
+    id: 7,
+    x: 150,
+    y: 165,
+    w: 50,
+    h: 65,
+    reservation: {
+      orgName: "FYI",
+      orgId: 25
+    }
+  },
+  {
+    id: 8,
+    x: 250,
+    y: 165,
+    w: 50,
+    h: 65,
+    reservation: {
+      orgName: "BTW",
+      orgId: 25
+    }
+  },
+  {
+    id: 9,
+    x: 350,
+    y: 165,
+    w: 50,
+    h: 65,
+    reservation: {}
+  },
+  {
+    id: 10,
+    x: 450,
+    y: 165,
+    w: 50,
+    h: 65,
+    reservation: {}
   }
 ];
