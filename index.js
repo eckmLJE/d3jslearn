@@ -10,10 +10,6 @@ venueBooths.forEach(function(booth) {
   );
 });
 
-// $("#set-groups-button").click(setGroups);
-// $("#add-tables-button").click(addTables);
-// $("#add-reservations-button").click(addReservations);
-
 // d3 drawing
 
 var svg = d3.select("#venue-svg");
