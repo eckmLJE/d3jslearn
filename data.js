@@ -31,16 +31,16 @@ venueBooths = [
   },
   {
     id: 4,
-    x: 350,
-    y: 50,
+    x: 50,
+    y: 150,
     w: 50,
     h: 65,
     reservation: {}
   },
   {
     id: 5,
-    x: 450,
-    y: 50,
+    x: 150,
+    y: 150,
     w: 50,
     h: 65,
     reservation: {
@@ -50,16 +50,16 @@ venueBooths = [
   },
   {
     id: 6,
-    x: 50,
-    y: 165,
+    x: 250,
+    y: 150,
     w: 50,
     h: 65,
     reservation: {}
   },
   {
     id: 7,
-    x: 150,
-    y: 165,
+    x: 50,
+    y: 245,
     w: 50,
     h: 65,
     reservation: {
@@ -69,8 +69,8 @@ venueBooths = [
   },
   {
     id: 8,
-    x: 250,
-    y: 165,
+    x: 150,
+    y: 245,
     w: 50,
     h: 65,
     reservation: {
@@ -80,16 +80,8 @@ venueBooths = [
   },
   {
     id: 9,
-    x: 350,
-    y: 165,
-    w: 50,
-    h: 65,
-    reservation: {}
-  },
-  {
-    id: 10,
-    x: 450,
-    y: 165,
+    x: 250,
+    y: 245,
     w: 50,
     h: 65,
     reservation: {}

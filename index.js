@@ -1,3 +1,17 @@
+// booth list
+
+var boothList = $("#booth-list");
+venueBooths.forEach(function(booth) {
+  var orgAppend = booth.reservation.orgName
+    ? " - " + booth.reservation.orgName
+    : "";
+  boothList.append(
+    "<li class='list-group-item'>" + booth.id + orgAppend + "</li>"
+  );
+});
+
+// d3 drawing
+
 var svg = d3.select("#venue-svg");
 
 // $("#set-groups-button").click(setGroups);
@@ -6,9 +20,11 @@ var svg = d3.select("#venue-svg");
 
 svg
   .append("rect")
-  .attr("width", 600)
-  .attr("height", 300)
+  .attr("width", "100%")
+  .attr("height", "100%")
   .style("fill", "none")
+  //   .style("stroke", "rgba(0,0,0,.125)")
+  //   .style("stroke-width", "1px")
   .style("pointer-events", "all")
   .call(
     d3
@@ -42,17 +58,19 @@ var tableRects = tables
   .attr("height", function(d) {
     return d.h;
   })
-  .attr("fill", "none");
-
-tableRects.attr("fill", function(d) {
-  return $.isEmptyObject(d.reservation) ? "none" : "#FF5733";
-});
+  .attr("fill", "none")
+  .attr("fill", function(d) {
+    return $.isEmptyObject(d.reservation) ? "none" : "#FF5733";
+  })
+  .attr("id", function(d) {
+    return "table-" + d.id;
+  });
 
 tables
   .append("text")
   .text(function(d) {
-    return d.reservation.orgName;
+    return d.reservation.orgName ? d.reservation.orgName : "Available";
   })
-  .attr("dy", 20)
+  .attr("dy", 15)
   .attr("dx", 5)
-  .attr("font-size", "12px");
+  .attr("font-size", "10px");
